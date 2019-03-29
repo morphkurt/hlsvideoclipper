@@ -1,0 +1,35 @@
+{
+  "baseDomain": "https://example.com",
+  "urlPrefix": "/hls-vod/xxxxx/",
+  "assetLength": 1197,
+  "rates": [
+    {
+      "rate": 2400000,
+      "playListName": "output_2400kbps_720p.mp4"
+    },
+    {
+      "rate": 700000,
+      "playListName": "output_700kbps_360p.mp4"
+    },
+    {
+      "rate": 400000,
+      "playListName": "output_400kbps_270p.mp4"
+    },
+    {
+      "rate": 236000,
+      "playListName": "output_236kbps_180p.mp4"
+    },
+    {
+      "rate": 168000,
+      "playListName": "output_168kbps_180p.mp4"
+    }
+  ],
+  "segmentLength": 8,
+  "fullLength": 0,
+  "clips": [
+    {
+      "start": 5570,
+      "end": 5580
+    }
+  ]
+}
