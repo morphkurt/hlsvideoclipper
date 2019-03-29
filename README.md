@@ -40,3 +40,10 @@ output_2400kbps_720p.mp4Frag5Num4.ts
 #EXT-X-ENDLIST
 ~~~
 
+With this concept for a given time window. We can calculate the segment numbers we are required to make avaialble on the playlist to create the clip.
+
+~~~
+startSegmentNumber = Math.floor(clip.start/json.segmentLength)
+endSegment=Math.ceil(clip.end/json.segmentLength);
+~~~
+
