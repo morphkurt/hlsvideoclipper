@@ -47,3 +47,24 @@ startSegmentNumber = Math.floor(clip.start/json.segmentLength)
 endSegment=Math.ceil(clip.end/json.segmentLength);
 ~~~
 
+Things to consider, if we are jumping between segments which were not orignally created next to each other. As following example. We are required to add ~#EXT-X-DISCONTINUITY~ tag
+
+~~~
+#EXTM3U
+#EXT-X-MEDIA-SEQUENCE:0
+#EXT-X-ALLOW-CACHE:NO
+#EXT-X-VERSION:2
+#EXT-X-TARGETDURATION:8
+#EXTINF:8,
+output_2400kbps_720p.mp4Frag4Num3.ts
+#EXTINF:8,
+output_2400kbps_720p.mp4Frag5Num4.ts
+#EXT-X-DISCONTINUITY
+#EXTINF:8,
+output_2400kbps_720p.mp4Frag31Num30.ts
+#EXTINF:8,
+output_2400kbps_720p.mp4Frag32Num31.ts
+#EXT-X-ENDLIST
+~~~
+
+
